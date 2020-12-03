@@ -1,8 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="249" height="82" viewBox="0 0 249 82">
-  <g id="Logo" transform="translate(-416 -518)">
-    <g id="Group_36" data-name="Group 36">
-      <text id="Mus_co" data-name="Mus co" transform="translate(416 583)" fill="rgba(78,78,78,0.87)" font-size="67" font-family="Montserrat-Regular, Montserrat" letter-spacing="0.03em"><tspan x="0" y="0">Mus co</tspan></text>
-      <path id="Path_7" data-name="Path 7" d="M20.676,10.363a10.338,10.338,0,1,0-4.822,8.719L10.048,55.776l3.307.523,6.7-42.326-.037-.006A10.264,10.264,0,0,0,20.676,10.363Z" transform="translate(559.214 533.293) rotate(-9)" fill="#f7aab0" stroke="#f7aab0" stroke-width="1"/>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="249" height="82" viewBox="0 0 249 82"><g transform="translate(-416 -518)"><text transform="translate(416 583)" fill="rgba(78,78,78,0.87)" font-size="67" font-family="Montserrat-Regular, Montserrat" letter-spacing="0.03em"><tspan x="0" y="0">Mus co</tspan></text><path d="M20.676,10.363a10.338,10.338,0,1,0-4.822,8.719L10.048,55.776l3.307.523,6.7-42.326-.037-.006A10.264,10.264,0,0,0,20.676,10.363Z" transform="translate(559.214 533.293) rotate(-9)" fill="#f7aab0" stroke="#f7aab0" stroke-width="1"/></g></svg>
