@@ -16,17 +16,20 @@ const showNav = () => {
     const nav = document.querySelector('.responsive-nav');
     const body = document.querySelector('body');
     const navLinks=document.querySelectorAll('.responsive-nav li');
-
+    const navLinks1=document.querySelector('.responsive-nav li:first-child');
+    const navLinks2=document.querySelector('.responsive-nav li:nth-child(2)');
+    const navLinks3=document.querySelector('.responsive-nav li:last-child');
 
     burger.addEventListener('click', ()=> {
         //Toogle nav
         nav.classList.toggle('nav-active');
         if(body.style.overflow){
-            body.style.overflow=''
+            body.style.overflow='';
         }
         else{
             body.style.overflow="hidden";
         }
+        //console.log("works");
         //Animate links
         navLinks.forEach((link,index)=>{
             if(link.style.animation)
@@ -37,7 +40,7 @@ const showNav = () => {
             link.style.animation = `navLinkFade 0.5s ease-in forwards ${index/7 + 0.3}s`;
             }
         });
-        //Burger animation
+        //Burger animation, kapcsoló gomb, X
         burger.classList.toggle('toggle');
         if(burger.className=="toggle")
         {
@@ -47,7 +50,40 @@ const showNav = () => {
             nav.style.animation='';
         }
     });
-    
+
+    navLinks1.addEventListener('click', ()=>{
+            nav.classList.remove('nav-active');
+            burger.classList.remove('toggle');
+            body.style.overflow= '';
+            navLinks.forEach((link)=>{
+                
+                    link.style.animation='';
+               
+                })    
+    }
+    );
+    navLinks2.addEventListener('click', ()=>{
+        nav.classList.remove('nav-active');
+        burger.classList.remove('toggle');
+        body.style.overflow= '';
+        navLinks.forEach((link)=>{
+            
+                link.style.animation='';
+           
+            })    
+}
+);
+    navLinks3.addEventListener('click', ()=>{
+    nav.classList.remove('nav-active');
+    burger.classList.remove('toggle');
+    body.style.overflow= '';
+    navLinks.forEach((link)=>{
+        
+            link.style.animation='';
+       
+        })    
+}
+);
 
 }
 
