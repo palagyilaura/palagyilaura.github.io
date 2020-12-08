@@ -17,7 +17,7 @@ section
 .landing-page
     min-height: 100vh
     @media screen and ( max-width: 576px )
-        background: linear-gradient(180deg, white 0%, rgba(114,94,151,0.2) 40%, rgba(247,170,176,0.2) 70%,  white 100%)     
+        background: linear-gradient(180deg, white 0%, rgba(114,94,151,0.2) 40%, rgba(247,170,176,0.2) 70%,  #ffffff25 100%)     
     //height: 640px
     /*@media screen and ( min-width: 320px  )
         height: 300px
@@ -33,7 +33,6 @@ section
     width: 90%
     max-width: 1100px
     margin: 0 auto
-    //overflow-x: hidden
     position: relative
     @media screen and ( min-width: 992px )
         padding-right: 40px
@@ -44,6 +43,8 @@ section
 body
     background-image: linear-gradient(180deg, white 0%, rgba(229,229,229,0.2) 30%, white 60%,  white 100%)
     z-index: -101
+    box-sizing: border-box
+
 .main-content
     position: relative
     min-height: 100vh
@@ -145,6 +146,8 @@ header
     @media screen and ( max-width: 576px  )
         width: 100%
         text-align: center
+        //display: flex
+        //flex-direction: column
         //top: 60px
     @media screen and ( min-width: 576px  )
         width: 50%
@@ -213,17 +216,29 @@ a.projects, .podcast-playlist
     z-index: 0
     outline: none
 .talk-button1
+    display: block
     background: linear-gradient(-35deg,rgba(247,170,176,0.85),rgba(114,94,151,0.8))
     color: white
+    position: -webkit-sticky
+    position: sticky
+    bottom: 0
+    right: 0
+    z-index: 50
+    transition: all .5s ease-in-out
+    visibility: visible
+    overflow: hidden
+    transform: translateZ(0)
         
 .talk-button2
     background: white
     color: $purple
     cursor: pointer
+    margin: 10px auto
 @media only screen and ( max-width: 576px  )
     .talk-button
         padding: 10px 15px
         margin-top: 10px
+        margin: 10px auto
 
 //MENU
 nav
@@ -254,13 +269,15 @@ nav
      color: $darkgrey
      font-size: 12px
      border: 1px solid transparent
+    a.links:focus
+        text-decoration: none
 .responsive-nav a.links:active, a.links:hover
         text-decoration: none
         color: $purple
         transition: 1s ease-out 
         border: 1px solid $purple
         border-radius: 30px
-       
+    
 
 //MOBILE MENU
 .burger
@@ -594,3 +611,6 @@ a.lara-sign
 a.lara-sign:hover
     color: $lightgrey
     border: none
+
+body.modal-open
+    padding-right: 0px

@@ -24,8 +24,8 @@ section {
 
 @media screen and (max-width: 576px) {
   .landing-page {
-    background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(40%, rgba(114, 94, 151, 0.2)), color-stop(70%, rgba(247, 170, 176, 0.2)), to(white));
-    background: linear-gradient(180deg, white 0%, rgba(114, 94, 151, 0.2) 40%, rgba(247, 170, 176, 0.2) 70%, white 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(40%, rgba(114, 94, 151, 0.2)), color-stop(70%, rgba(247, 170, 176, 0.2)), to(#ffffff25));
+    background: linear-gradient(180deg, white 0%, rgba(114, 94, 151, 0.2) 40%, rgba(247, 170, 176, 0.2) 70%, #ffffff25 100%);
   }
 }
 
@@ -49,6 +49,8 @@ body {
   background-image: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(30%, rgba(229, 229, 229, 0.2)), color-stop(60%, white), to(white));
   background-image: linear-gradient(180deg, white 0%, rgba(229, 229, 229, 0.2) 30%, white 60%, white 100%);
   z-index: -101;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .main-content {
@@ -400,20 +402,34 @@ a.projects, .podcast-playlist {
 }
 
 .talk-button1 {
+  display: block;
   background: linear-gradient(-35deg, rgba(247, 170, 176, 0.85), rgba(114, 94, 151, 0.8));
   color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  right: 0;
+  z-index: 50;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  visibility: visible;
+  overflow: hidden;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 
 .talk-button2 {
   background: white;
   color: #725E97;
   cursor: pointer;
+  margin: 10px auto;
 }
 
 @media only screen and (max-width: 576px) {
   .talk-button {
     padding: 10px 15px;
     margin-top: 10px;
+    margin: 10px auto;
   }
 }
 
@@ -463,6 +479,10 @@ nav .logo img {
   color: #4E4E4E;
   font-size: 12px;
   border: 1px solid transparent;
+}
+
+.responsive-nav a.links:focus {
+  text-decoration: none;
 }
 
 .responsive-nav a.links:active, a.links:hover {
@@ -1031,5 +1051,9 @@ a.lara-sign {
 a.lara-sign:hover {
   color: #E5E5E5;
   border: none;
+}
+
+body.modal-open {
+  padding-right: 0px;
 }
 /*# sourceMappingURL=style.css.map */
